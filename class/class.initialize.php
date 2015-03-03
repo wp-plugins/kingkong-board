@@ -17,32 +17,34 @@
     }
 
     public function KingkongBoard_Register_Post_Types(){
-      global $wpdb;
-      $table   = $wpdb->prefix."posts";
-      $results = $wpdb->get_results("SELECT * FROM ".$table." WHERE post_type = 'kkboard' AND post_status = 'publish' ");
 
-      if($results){
+      if ( !is_multisite() ) {
+        global $wpdb;
+        $table   = $wpdb->prefix."posts";
+        $results = $wpdb->get_results("SELECT * FROM ".$table." WHERE post_type = 'kkboard' AND post_status = 'publish' ");
 
-        foreach($results as $result){
+        if($results){
 
-          $board_id         = $result->ID;
-          $board_slug       = get_post_meta($board_id, 'kingkongboard_slug', true);
+          foreach($results as $result){
 
-          if($board_slug){
-            register_post_type( 'kkb_'.$board_slug,
-              array(
-                'labels' => array(
-                  'name' => 'kkb_'.$board_slug
-                ),
-                'public' => false,
-                'capability_type' => 'kkb_'.$board_slug,
-                'map_meta_cap'    => true
-                )
-            );
+            $board_id         = $result->ID;
+            $board_slug       = get_post_meta($board_id, 'kingkongboard_slug', true);
+
+            if($board_slug){
+              register_post_type( 'kkb_'.$board_slug,
+                array(
+                  'labels' => array(
+                    'name' => 'kkb_'.$board_slug
+                  ),
+                  'public' => false,
+                  'capability_type' => 'kkb_'.$board_slug,
+                  'map_meta_cap'    => true
+                  )
+              );
+            }
           }
         }
       }
-
     }    
 
     public function KingkongBoard_register_buttons($buttons){
