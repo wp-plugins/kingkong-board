@@ -506,7 +506,7 @@
 }
 
 .kingkongboard-comment-wrapper .comment-author-table td {
-	padding:0;
+	padding:0px 5px !important;
 }
 
 #kingkongboard-wrapper .comments-count {
