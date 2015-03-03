@@ -4,7 +4,7 @@
     function __construct($file){
       add_action( 'admin_menu', array($this, 'KingkongBoard_AddMenu') );
       add_action( 'admin_enqueue_scripts', array($this, 'KingkongBoard_AdminStyle') );
-      add_action( 'wp_enqueue_scripts', array($this, 'KingkongBoard_Style'));
+      add_action( 'wp_enqueue_scripts', array($this, 'KingkongBoard_Style'), 9999);
       add_filter( 'mce_buttons', array($this, 'KingkongBoard_register_buttons') );
       add_filter( 'mce_external_plugins', array($this, 'KingkongBoard_register_tinymce_javascript') );
       add_action( 'get_header', array($this, 'kingkongboard_enable_threaded_comments') );
@@ -76,7 +76,7 @@
 
     public function KingkongBoard_Style(){
       wp_enqueue_script('jquery');
-      wp_enqueue_style('kingkongboard-style', KINGKONGBOARD_PLUGINS_URL."/assets/css/kingkongboard.css" );
+      wp_enqueue_style('kingkongboard-style', KINGKONGBOARD_PLUGINS_URL."/assets/css/kingkongboard.css");
       wp_enqueue_script('kingkongboard-js', KINGKONGBOARD_PLUGINS_URL."/assets/js/kingkongboard.js", array("jquery"));
       wp_localize_script('kingkongboard-js', 'ajax_kingkongboard', array( 'ajax_url' => admin_url('admin-ajax.php') ));
     }
