@@ -4,7 +4,7 @@ Donate link: http://www.superrocket.io
 Tags: 킹콩보드, 한국형게시판, 게시판, kingkongboard, board, kboard, 한국게시판, 플러그인, 킹콩게시판, kingkong, 킹콩
 Requires at least: 3.8.0
 Tested up to: 3.8
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
