@@ -26,7 +26,6 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  * @category Core
  * @author Bryan Lee
  */
-
 define('KINGKONGBOARD_ABSPATH', plugin_dir_path(__FILE__));             // 플러그인 절대경로
 define('KINGKONGBOARD_PLUGINS_URL', plugins_url('', __FILE__));         // 플러그인 상대경로
 
