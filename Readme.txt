@@ -21,7 +21,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 == Installation ==
 
 1. 워드프레스 공식 홈페이지에서 킹콩보드를 다운로드 받습니다.
-2. 대시보드에서 설치를 진행하시려면 플러그인검색 에서 킹콩보드를 검색 하시면 됩니다.
+2. 대시보드에서 설치를 진행하시려면 플러그인검색 에서 kingkongboard 를 검색 하시면 됩니다.
 3. 파일로 설치 하실 경우 wp-admin/plugins/kingkong-board 폴더를 생성하신 후 압축을 풀어 주시면 됩니다.
 
 == Screenshots == 
