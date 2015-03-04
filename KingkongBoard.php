@@ -1,14 +1,14 @@
 <?php
- /*
- Plugin Name: Kingkong Board
- Plugin URI: http://www.superrocket.io
- Description: 슈퍼로켓에서 제공하는 한국형 워드프레스 게시판 플러그인 입니다. 
- Version: 1.0.5
- Author: Bryan Lee
- Author URI: http://www.superrocket.io
- License: GPL2
+/*
+Plugin Name: Kingkong Board
+Plugin URI: http://www.superrocket.io
+Description: 슈퍼로켓에서 제공하는 한국형 워드프레스 게시판 플러그인 입니다. 
+Version: 1.0.5
+Author: Bryan Lee
+Author URI: http://www.superrocket.io
+License: GPL2
 
- /* Copyright 2014 Super Rocket (email : ithemeso@gmail.com )
+Copyright 2014 Super Rocket (email : ithemeso@gmail.com )
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License, version 2, as
 published by the Free Software Foundation.
