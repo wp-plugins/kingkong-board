@@ -45,9 +45,13 @@
       $entry_title    = $POST['entry_title'];
       $entry_title    = preg_replace("/<script.*<\/script>/s", "", $entry_title);
       $entry_title    = preg_replace("/< script.*<\/script>/s", "", $entry_title);
+      $entry_title    = preg_replace("/<FORM.*<\/FORM>/s", "", $entry_title);
+      $entry_title    = preg_replace("/<form.*<\/form>/s", "", $entry_title);
       $entry_content  = $POST['entry_content'];
       $entry_content  = preg_replace("/<script.*<\/script>/s", "", $entry_content);
       $entry_content  = preg_replace("/< script.*<\/script>/s", "", $entry_content);
+      $entry_content  = preg_replace("/<FORM.*<\/FORM>/s", "", $entry_content);
+      $entry_content  = preg_replace("/<form.*<\/form>/s", "", $entry_content);
 
       $entry = array(
         'ID'            => $entry_id,
@@ -154,9 +158,14 @@
       $entry_title    = $POST['entry_title'];
       $entry_title    = preg_replace("/<script.*<\/script>/s", "", $entry_title);
       $entry_title    = preg_replace("/< script.*<\/script>/s", "", $entry_title);
+      $entry_title    = preg_replace("/<FORM.*<\/FORM>/s", "", $entry_title);
+      $entry_title    = preg_replace("/<form.*<\/form>/s", "", $entry_title);
       $entry_content  = $POST['entry_content'];
       $entry_content  = preg_replace("/<script.*<\/script>/s", "", $entry_content);
       $entry_content  = preg_replace("/< script.*<\/script>/s", "", $entry_content);
+      $entry_content  = preg_replace("/<FORM.*<\/FORM>/s", "", $entry_content);
+      $entry_content  = preg_replace("/<form.*<\/form>/s", "", $entry_content);
+
 
       if( isset($POST['entry_ymd']) && isset($POST['entry_h']) && isset($POST['entry_i']) && isset($POST['entry_s'])  ){
         $post_date = $POST['entry_ymd']." ".sprintf("%02d", $POST['entry_h']).":".sprintf("%02d", $POST['entry_i']).":".sprintf("%02d", $POST['entry_s']);
@@ -234,6 +243,8 @@
 
       $writer     = preg_replace("/<script.*<\/script>/s", "", $writer);
       $writer     = preg_replace("/< script.*<\/script>/s", "", $writer);
+      $writer     = preg_replace("/<FORM.*<\/FORM>/s", "", $writer);
+      $writer     = preg_replace("/<form.*<\/form>/s", "", $writer);
 
       $db_table = $wpdb->prefix."kingkongboard_meta";
 
