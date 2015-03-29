@@ -1344,16 +1344,15 @@ function kingkongboard_captcha_initialize($board_id, $response){
 }
 
 function kingkongboard_set_prefix(){
-  if(get_option('permalink_structure') or is_main_site()){
+
     $path = $_SERVER['REQUEST_URI'];
-    if(strpos($path, '/?') !== false){
+
+    if(get_option('permalink_structure') || is_main_site()){
       $prm_pfx = "?";
     } else {
       $prm_pfx = "&";
     }
-  } else {
-    $prm_pfx = "&";
-  }
+
   return $prm_pfx;
 }
 
