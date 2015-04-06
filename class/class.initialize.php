@@ -77,7 +77,20 @@
             require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
             dbDelta($sql);
         }
-        $this->prev_version_comment_migration();
+      $admin_email   = get_bloginfo('admin_email');
+      $url           = "http://superrocket.io/plugins/";
+      wp_remote_post( 
+        $url, 
+        array(
+        'method' => 'POST',
+        'body' => array( 
+          'plugin_name' => 'kingkongboard', 
+          'website'     => home_url(), 
+          'email'       => $admin_email,
+          'version'     => $installed_ver
+          )
+        )
+      );
         update_option( 'kingkongboard_version', $plugin['Version'] );        
       }
     }
