@@ -262,7 +262,7 @@ class KKB_Backup {
 
   public function download($data, $file='xml', $filename=''){
     if(!$filename) $filename = 'KingkongBoard-Backup-'.date("YmdHis").'.'.$file;
-    header("Content-Type: ".kboard_mime_type($filename));
+    header("Content-Type: application/xml");
     header("Content-Disposition: attachment; filename=\"".$filename."\"");
     header("Pragma: no-cache");
     Header("Expires: 0");
