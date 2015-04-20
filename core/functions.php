@@ -1284,29 +1284,28 @@ function kingkongboard_add_skin($type, $slug, $title, $plugins_url, $abspath, $c
   } else {
     $duplicate = 0;
     $skins = get_option("kingkongboard_skins", true);
-    if($skins != null){
+    if(is_array(maybe_unserialize($skins))){
       $skins = maybe_unserialize($skins);
-      if($skins != false){
-        foreach($skins as $skin){
-          if($skin['slug'] == $slug && $skin['type'] == $type){
-            $duplicate = 1;
-          }
-        }
-        if($duplicate == 0){
-          $skins[] = array(
-            'type'        => $type,
-            'slug'        => $slug,
-            'title'       => $title,
-            'plugins_url' => $plugins_url,
-            'abspath'     => $abspath,
-            'core'        => $core
-          );
-
-          $skins = serialize($skins);
+      foreach($skins as $skin){
+        if($skin['slug'] == $slug && $skin['type'] == $type){
+          $duplicate = 1;
         }
       }
+      if($duplicate == 0){
+        $skins[] = array(
+          'type'        => $type,
+          'slug'        => $slug,
+          'title'       => $title,
+          'plugins_url' => $plugins_url,
+          'abspath'     => $abspath,
+          'core'        => $core
+        );
+        $skins = serialize($skins);
+      } else {
+        return false;
+      }
     } else {
-      $skins = array();
+      $skins    = array();
       $skins[0] = array(
         'type'        => $type,
         'slug'        => $slug,
