@@ -66,7 +66,7 @@
 
     $kkbContent .= '<tr>';
     $kkbContent .= '<td class="write-content">';
-    $kkbContent .= wp_get_shortlink($entry_id);
+    //$kkbContent .= wp_get_shortlink($entry_id);
     $kkb_read_content_before = apply_filters('kkb_read_content_inner_before', $board_id, $entry_id);
     if($kkb_read_content_before != $board_id){
         $kkbContent .= $kkb_read_content_before;
