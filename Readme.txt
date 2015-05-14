@@ -1,5 +1,5 @@
 === Kingkong Board ===
-Contributors: Bryan3598,Jomalkeun
+Contributors: Bryan3598
 Donate link: http://www.superrocket.io
 Tags: 킹콩보드, 한국형게시판, 게시판, kingkongboard, board, kboard, 한국게시판, 플러그인, 킹콩게시판, kingkong, 킹콩
 Requires at least: 3.8.0
@@ -8,7 +8,10 @@ Stable tag: 1.7.3
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-킹콩보드는 한국형 게시판 플러그인으로 다양한 확장성과 편리한 UI 를 바탕으로 제작 되었습니다. 
+킹콩보드는 한국형 게시판 플러그인으로 다양한 확장성과 편리한 UI 를 바탕으로 제작 되었습니다.
+
+- Contributors - 
+1. 중문번역 : Jomalkeun(jomalkeun@gmail.com)
 
 == Description ==
 
