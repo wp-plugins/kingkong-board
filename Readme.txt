@@ -38,7 +38,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Changelog ==
 
-= 1.7.6
+= 1.7.6 =
 1. 코멘트 삭제 일부 오류가 수정되었습니다.
 2. 일부 CSS 가 개선 되었습니다.
 3. 게시판 LOOP 관련 액션필터가 추가 되었습니다.
