@@ -174,7 +174,7 @@ class KKB_Controller {
 */
   public function kkb_upload_filter($file){
     $random = rand(1000, 999);
-    $filetype = wp_check_Filetype($file['name']);
+    $filetype = wp_check_filetype($file['name']);
     $file['name'] = 'kkb-'.date('YmdHis').$random.'.'.$filetype['ext'];
     return $file;
   }
