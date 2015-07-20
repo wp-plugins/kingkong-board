@@ -22,7 +22,7 @@ class kkbMimeIcons {
       case 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' :
         return $this->base . "xls.png"; break;
       case 'application/pdf':
-        return $base . "pdf.png"; break;
+        return $this->base . "pdf.png"; break;
       case 'application/x-compressed':
       case 'application/x-zip-compressed':
       case 'application/zip':
