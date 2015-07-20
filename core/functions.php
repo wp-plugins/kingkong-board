@@ -152,7 +152,6 @@
     (get_post_meta($board_id, 'board_sections')) ? $board_sections = get_post_meta($board_id, 'board_sections') : $board_sections = null;
     $board_sections       = maybe_unserialize($board_sections);
 
-    if(!$board_sections)
     $not_allow_keyword    = null;
     $not_allow_keyword_title = null;
     $result_keyword       = null;
