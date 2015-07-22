@@ -1127,7 +1127,7 @@ div#kingkongboard-wrapper div.kkb-write-wrapper div.attach-message-box {
 }
 
 div#kingkongboard-wrapper div.kkb-write-wrapper div.popular-tag-list {
-	display:block;
+	display:none;
 	position:relative;
 	height:0px;
 	margin:0 0 0 100px;

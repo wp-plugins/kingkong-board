@@ -1330,7 +1330,7 @@
       }
       if($result_tags){
         $result_tags = join(',', $result_tags);
-        $results = $wpdb->get_results("SELECT term_taxonomy_id FROM {$tax_table} WHERE term_taxonomy_id IN ({$result_tags}) ORDER BY count DESC LIMIT 10");
+        $results = $wpdb->get_results("SELECT term_taxonomy_id FROM {$tax_table} WHERE term_taxonomy_id IN ({$result_tags}) ORDER BY count DESC LIMIT 8");
         foreach($results as $result){
           $terms[] = $result->term_taxonomy_id;
         }

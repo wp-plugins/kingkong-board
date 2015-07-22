@@ -16,10 +16,13 @@ jQuery(document).ready(function(){
     });
 
 	jQuery(".popular-tags").find(".btn-popular-tags").toggle(function(){
+		jQuery(".popular-tag-list").show();
 		jQuery(".popular-tag-list").stop().animate({'height' : '60px'}, {duration:400});
 		jQuery(this).html(jQuery(this).attr('data-fold'));
 	}, function(){
-		jQuery(".popular-tag-list").stop().animate({'height' : '0px'}, {duration:400});
+		jQuery(".popular-tag-list").stop().animate({'height' : '0px'}, {duration:400, complete:function(){
+			jQuery(".popular-tag-list").hide();
+		}});
 		jQuery(this).html(jQuery(this).attr('data-open'));
 	});
 
