@@ -49,6 +49,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 = 2.0.0.2 =
 1. 일부 테마와의 CSS 충돌 오류가 수정 되었습니다.
 2. 파일 업로드시 media.php 중복 include 문제가 수정 되었습니다.
+3. 댓글에 XSS 보안필터가 적용되었습니다. (wordpress:dlehsus 님 감사합니다.)
 
 = 2.0.0.1 =
 1. 버전형태가 기존 3자리에서 4자리로 변경되었습니다.
