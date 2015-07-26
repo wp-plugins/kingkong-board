@@ -35,15 +35,15 @@
 <?php echo apply_filters('kkb_board_loop_search_box_before', null, $board_id); ?>
       <span class="btn-kkb-search <?php echo kkb_button_classer($board_id);?>">
         <button class="kkb-list-icon kkblc-search" style="text-indent:-100px; border:0; position:relative; top:-2px; z-index:2; outline:0; cursor:pointer"></button>
-        <label class="btn-kkb-search-label">검색</label>
+        <label class="btn-kkb-search-label"><?php _e('검색', 'kingkongboard');?></label>
         <input type="text" name="kkb_keyword" class="kkb-keyword">
       </span>
       <span class="kkb-section-span">
         <select name="srchtype">
-          <option value="content">제목+내용</option>
-          <option value="writer">작성자명</option>
-          <option value="id">작성자아이디</option>
-          <option value="tag">태그검색</option>
+          <option value="content"><?php _e('제목+내용', 'kingkongboard');?></option>
+          <option value="writer"><?php _e('작성자명', 'kingkongboard');?></option>
+          <option value="id"><?php _e('작성자 아이디', 'kingkongboard');?></option>
+          <option value="tag"><?php _e('태그검색', 'kingkongboard');?></option>
         </select>
       </span>
       <input type="hidden" name="kkb_section" value="<?php echo $section;?>">
